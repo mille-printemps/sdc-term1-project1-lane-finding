@@ -1,4 +1,4 @@
-#**Finding Lane Lines on the Road** 
+# **Finding Lane Lines on the Road** 
 ---
 
 **Finding Lane Lines on the Road**
@@ -12,7 +12,7 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 My pipeline process an image as follows.
 
@@ -31,7 +31,7 @@ At Step 5 above, `draw_lines()` does following things.
 5. Draws the lane lines using the coordinates of the top ends and the bottom ends calculated at Step 3 and 4 above. 
 
 
-###2. Identify potential shortcomings with your current pipeline
+### 2. Identify potential shortcomings with your current pipeline
 
 
 Potential shortcoming would be
@@ -39,13 +39,13 @@ Potential shortcoming would be
 1. The logic implemented in `looksLikeLane()` to detect lane lines is not adaptive. The parameters to accept lines as part of a lane have to be manually set at this point. 
 2. The initial image processing affects the positions of the top ends of the lane lines. Since the positions of the top ends of the lane lines will be kept in a certain area throughout of a video, the positions the top ends could be locked in a wrong area throughout of a video e.g. if noises of image were not removed properly in the image processing and the noise was recognized as part of a lane. 
 
-###3. Suggest possible improvements to your pipeline
+### 3. Suggest possible improvements to your pipeline
 
 A possible improvement would be 
 
 1. To utilize more information to detect lane lines if possible. e.g. the position of the camera could be utilized to detect features of a lane line. If the position of the camera was relatively high, the slope of a lane would become steep and vice versa. 
 2. To conduct a fine tuning of the parameters of the image processing. This would be necessary to avoid fixing the position of the top ends at the first place. 
 
-###4. Note
+### 4. Note
 
 I tried the optional challenge, but I was not able to make it for the due date. My pipeline works just for the first and the second videos at this point. 
